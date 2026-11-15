@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#17120f">
+  <title>The Food Corner | Fresh • Tasty • Made with Love</title>
+  <style>
+    :root{--bg:#17120f;--panel:#211a15;--cream:#fff4e5;--muted:#c8b9a7;--orange:#ff9b45;--orange2:#f26b38;--line:rgba(255,244,229,.12)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1100px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(23,18,15,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{font-weight:900;letter-spacing:.3px;font-size:1.15rem}.brand span{color:var(--orange)}
+    .links{display:flex;gap:25px;color:var(--muted);font-size:.92rem}.links a:hover{color:var(--orange)}
+    .navbtn,.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:999px;padding:12px 19px;background:var(--orange);color:#24150d;font-weight:800;cursor:pointer}
+    .navbtn{padding:10px 16px;font-size:.88rem}
+    .hero{padding:72px 0 64px;overflow:hidden;background:radial-gradient(circle at 82% 40%,rgba(242,107,56,.22),transparent 34%),linear-gradient(135deg,#17120f,#24170f)}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:38px}
+    .eyebrow{display:inline-block;color:var(--orange);font-size:.78rem;font-weight:900;letter-spacing:2px;text-transform:uppercase}
+    h1{font-size:clamp(2.7rem,6vw,5.4rem);line-height:.99;letter-spacing:-3px;margin:17px 0}
+    h1 em{font-style:normal;color:var(--orange)}
+    .lead{color:var(--muted);font-size:1.08rem;line-height:1.8;max-width:510px}
+    .actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:27px}.btn.secondary{background:transparent;border:1px solid var(--line);color:var(--cream)}
+    .hero-art{min-height:350px;display:grid;place-items:center;position:relative}
+    .food-orb{width:min(330px,75vw);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 28%,#ffca82,#e87935 60%,#8c351d);box-shadow:0 25px 90px rgba(242,107,56,.24);font-size:clamp(8rem,20vw,12rem);transform:rotate(-9deg)}
+    .float-tag{position:absolute;background:#fff4e5;color:#24150d;border-radius:14px;padding:12px 16px;font-weight:900;box-shadow:0 12px 35px #0005}.tag1{top:35px;right:0}.tag2{bottom:35px;left:0}
+    section{padding:75px 0}.section-head{text-align:center;margin-bottom:34px}.section-head h2{font-size:clamp(2rem,4vw,3rem);margin:10px 0}.section-head p{color:var(--muted);margin:0}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.feature,.menu-card,.about-box{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:23px}
+    .feature .ico{font-size:2rem}.feature h3{margin:12px 0 7px}.feature p{margin:0;color:var(--muted);line-height:1.65;font-size:.94rem}
+    .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+    .menu-card{padding:0;overflow:hidden}.dish-art{height:175px;display:grid;place-items:center;font-size:5rem;background:linear-gradient(135deg,#50301f,#9c4b27)}
+    .dish-art.pizza{background:linear-gradient(135deg,#56331e,#bd7431)}.dish-art.burger{background:linear-gradient(135deg,#49301d,#a45b2e)}.dish-art.pasta{background:linear-gradient(135deg,#382b1c,#96703a)}.dish-art.fries{background:linear-gradient(135deg,#5a321a,#b8782e)}.dish-art.sandwich{background:linear-gradient(135deg,#30402a,#788747)}.dish-art.shake{background:linear-gradient(135deg,#4b2636,#a75c74)}
+    .dish-info{padding:18px}.dish-row{display:flex;justify-content:space-between;gap:10px;align-items:center}.dish-row h3{margin:0;font-size:1.05rem}.price{color:var(--orange);font-weight:900;white-space:nowrap}.dish-info p{color:var(--muted);font-size:.9rem;line-height:1.55;margin:9px 0 15px}
+    .order-small{width:100%;border:1px solid var(--line);background:transparent;color:var(--cream);border-radius:12px;padding:10px;font-weight:800;cursor:pointer}.order-small:hover{background:var(--orange);color:#24150d}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}.about-visual{min-height:300px;border-radius:24px;background:radial-gradient(circle at 50% 40%,#e88a42,#66351e 68%,#2a1a13);display:grid;place-items:center;font-size:8rem}.about-box h2{font-size:2.2rem;margin:10px 0}.about-box p{color:var(--muted);line-height:1.8}
+    .contact{background:linear-gradient(135deg,#302016,#21150f);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .contact-card{max-width:700px;margin:auto;text-align:center}.contact-card h2{font-size:clamp(2rem,5vw,3.4rem);margin:12px 0}.contact-card p{color:var(--muted);line-height:1.7}
+    footer{padding:25px 0;color:var(--muted);font-size:.88rem}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .notice{font-size:.8rem;color:#a99987;margin-top:12px}
+    @media(max-width:760px){.links{display:none}.hero{padding:54px 0 38px}.hero-grid,.about-grid{grid-template-columns:1fr}.hero-art{min-height:280px}.food-orb{width:245px}.tag1{right:5%}.tag2{left:5%}.features,.menu-grid{grid-template-columns:1fr 1fr}section{padding:58px 0}}
+    @media(max-width:480px){.features,.menu-grid{grid-template-columns:1fr}.nav{height:64px}.navbtn{padding:9px 13px}.hero-grid{gap:15px}h1{letter-spacing:-1.7px}.dish-art{height:155px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#home">THE <span>FOOD</span> CORNER.</a>
+      <nav class="links"><a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+      <a class="navbtn" href="#menu">Explore Menu ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">Good food, good mood</span>
+          <h1>Fresh bites.<br><em>Happy nights.</em></h1>
+          <p class="lead">Big flavours, fresh ingredients and food made with love. Find your new favourite bite at The Food Corner.</p>
+          <div class="actions"><a class="btn" href="#menu">Explore our menu</a><a class="btn secondary" href="#about">Our story</a></div>
+        </div>
+        <div class="hero-art" aria-label="Illustration of a delicious burger"><div class="food-orb">🍔</div><div class="float-tag tag1">★ Fresh every day</div><div class="float-tag tag2">Made with love ❤️</div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head"><span class="eyebrow">Why choose us</span><h2>A little more delicious</h2><p>Simple ingredients. Serious flavour. Every single time.</p></div>
+        <div class="features">
+          <article class="feature"><div class="ico">🥬</div><h3>Fresh ingredients</h3><p>We focus on fresh ingredients and carefully prepared meals.</p></article>
+          <article class="feature"><div class="ico">👨‍🍳</div><h3>Made with care</h3><p>Every order is prepared with attention, care and plenty of flavour.</p></article>
+          <article class="feature"><div class="ico">⚡</div><h3>Quick service</h3><p>Great food and a smooth ordering experience, without the wait.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" style="background:#1c1511">
+      <div class="wrap">
+        <div class="section-head"><span class="eyebrow">Customer favourites</span><h2>Our popular menu</h2><p>A few delicious picks to get you started.</p></div>
+        <div class="menu-grid">
+          <article class="menu-card"><div class="dish-art burger">🍔</div><div class="dish-info"><div class="dish-row"><h3>Classic Burger</h3><span class="price">₹129</span></div><p>A juicy, flavour-packed burger with fresh veggies.</p><button class="order-small" onclick="order('Classic Burger',129)">Order this</button></div></article>
+          <article class="menu-card"><div class="dish-art pizza">🍕</div><div class="dish-info"><div class="dish-row"><h3>Cheese Pizza</h3><span class="price">₹199</span></div><p>Golden crust, rich sauce and plenty of cheese.</p><button class="order-small" onclick="order('Cheese Pizza',199)">Order this</button></div></article>
+          <article class="menu-card"><div class="dish-art pasta">🍝</div><div class="dish-info"><div class="dish-row"><h3>Creamy Pasta</h3><span class="price">₹179</span></div><p>Creamy, comforting pasta with a delicious finish.</p><button class="order-small" onclick="order('Creamy Pasta',179)">Order this</button></div></article>
+          <article class="menu-card"><div class="dish-art fries">🍟</div><div class="dish-info"><div class="dish-row"><h3>Crispy Fries</h3><span class="price">₹89</span></div><p>Crispy golden fries, perfect for sharing.</p><button class="order-small" onclick="order('Crispy Fries',89)">Order this</button></div></article>
+          <article class="menu-card"><div class="dish-art sandwich">🥪</div><div class="dish-info"><div class="dish-row"><h3>Veg Sandwich</h3><span class="price">₹109</span></div><p>A fresh and tasty sandwich for any time of day.</p><button class="order-small" onclick="order('Veg Sandwich',109)">Order this</button></div></article>
+          <article class="menu-card"><div class="dish-art shake">🥤</div><div class="dish-info"><div class="dish-row"><h3>Chocolate Shake</h3><span class="price">₹99</span></div><p>A cool, creamy chocolate treat.</p><button class="order-small" onclick="order('Chocolate Shake',99)">Order this</button></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap about-grid">
+        <div class="about-visual">🍽️</div>
+        <div class="about-box"><span class="eyebrow">A taste of happiness</span><h2>Food brings us together.</h2><p>At The Food Corner, we believe a good meal can make an ordinary day special. Our sample menu brings together familiar favourites in a warm, welcoming place.</p><a class="btn" href="#contact">Come say hello</a></div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap contact-card"><span class="eyebrow">Let's connect</span><h2>Craving something tasty?</h2><p>Send us a message to ask about the menu or place an order. Replace the sample contact details with the restaurant's real information before publishing for a client.</p><a class="btn" href="https://wa.me/?text=Hello%20The%20Food%20Corner%2C%20I%20would%20like%20to%20know%20more%20about%20your%20menu." target="_blank" rel="noopener">Message on WhatsApp ↗</a><div class="notice">Demo website • Sample restaurant • Sample menu and prices</div></div>
+    </section>
+  </main>
+
+  <footer><div class="wrap foot"><span>© <span id="year"></span> The Food Corner</span><span>Fresh • Tasty • Made with Love</span></div></footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function order(name, price) {
+      const message = `Hello The Food Corner! I would like to order ${name} (₹${price}). Please share the next steps.`;
+      window.open('https://wa.me/?text=' + encodeURIComponent(message), '_blank');
+    }
+  </script>
+</body>
+</html>
